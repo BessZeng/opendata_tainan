@@ -29,7 +29,7 @@ logging.basicConfig(
 # 設定變數
 DB_HOST = os.environ.get("DB_HOST", "localhost")
 DB_USER = os.environ.get("DB_USER", "besszeng")
-DB_PASSWORD = os.environ.get("DB_PASSWORD", "@Yunong1030012")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "Yunong1030012")
 DB_PORT = int(os.environ.get("DB_PORT", 3306))
 DB_NAME = os.environ.get("DB_NAME", "tainan")
 DB_CHARSET = os.environ.get("DB_CHARSET", "utf8mb4")
@@ -92,7 +92,7 @@ def save_to_mysql(data):
         conn = pymysql.connect(
             host=DB_HOST,
             user=DB_USER,
-            passwd=DB_PASSWORD,
+            password=DB_PASSWORD,
             port=DB_PORT,
             charset=DB_CHARSET
         )
